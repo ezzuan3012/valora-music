@@ -23,7 +23,7 @@ if not CLIENT_ID or not CLIENT_SECRET:
 
 # Update this to your Render URL when pushing to live, 
 # or keep as localhost for testing on your computer.
-REDIRECT_URI = "https://valora-music.onrender.com"
+REDIRECT_URI = "https://valora-music.onrender.com/callback"  # For Render deployment
 
 # --- 1. Load Processed Song Database (The "Brain") ---
 DATABASE_FILE = 'valora_database.csv' 
