@@ -1,0 +1,17 @@
+# Python virtual environment (if you have one)
+venv/
+.env
+
+# Compiled python files
+__pycache__/
+*.pyc
+
+# The RAW massive datasets (GitHub has a 100MB limit)
+# Your app only needs 'valora_database.csv', so ignore the raw inputs
+combined_processed.csv
+Liked_Songs_Spotify.csv
+data_moods.csv
+spotify_huggingface.csv
+
+# Mac system files
+.DS_Store

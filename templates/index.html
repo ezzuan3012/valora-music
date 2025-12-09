@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valora Music</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-black text-light">
+
+    <canvas id="snowCanvas"></canvas>
+
+    <div class="valora-logo">Valora</div>
+
+    <div class="main-content d-flex flex-column justify-content-center align-items-center min-vh-100 text-center p-4 position-relative z-1">
+        
+        <h1 class="main-heading animate-text display-3 fw-bold mb-5">How are you feeling today?</h1>
+        
+        <a href="{{ url_for('login') }}" class="btn btn-valora-login btn-lg rounded-pill fw-bold d-inline-flex align-items-center justify-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-spotify me-2" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.5.5 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .138.686m-.657-2.177a.5.5 0 0 1-.708.136c-1.631-1.002-4.01-1.284-6.687-.718a.5.5 0 0 1-.231-.967c2.928-.605 5.547-.291 7.37.836a.5.5 0 0 1 .169.708m-.75-2.28a.5.5 0 0 1-.728.115c-1.457-.883-3.653-1.11-6.358-.603a.5.5 0 0 1-.248-.95c3.007-.558 5.485-.296 7.195.732a.5.5 0 0 1 .139.728"/>
+            </svg>
+            <span>LOGIN WITH SPOTIFY</span>
+        </a>
+        
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
