@@ -8,7 +8,7 @@ import time
 from datetime import timedelta 
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)
+app.secret_key = "super_secret_valora_key_123"
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
 
 # --- Configuration ---
@@ -114,12 +114,12 @@ def logout(): session.clear(); return redirect(url_for('index'))
 
 @app.route('/remarks')
 def remarks():
-    # Check if user is logged in (has a token in their session)
+    # Check if user is logged in
     if 'token_info' not in session:
-        # If not, send them back to the login page
+        # If the session was lost (due to the key error), this sends them home.
+        # Once the key is fixed, this should pass!
         return redirect(url_for('index'))
     
-    # If they are logged in, show them the remarks page
     return render_template('remarks.html')
 
 @app.route('/questionnaire')
