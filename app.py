@@ -188,7 +188,7 @@ def get_recommendations():
             final_track_ids.extend(list(general_recs['track_id']))
         
         if num_liked > 0:
-             message = f"Here are {len(final_track_ids)} songs for you ({num_liked} from your taste, {num_general} new):"
+             message = f"Here are {len(final_track_ids)} songs for you ({num_liked} from your preferences, {num_general} new):"
         else:
              message = f"Here are {len(final_track_ids)} songs from our library for you:"
         print(message)
